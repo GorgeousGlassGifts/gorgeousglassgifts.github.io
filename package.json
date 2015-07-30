@@ -2,17 +2,17 @@
   "name": "gorgeous-glass-gifts",
   "description": "Gorgeous Glass Gifts Website.",
   "version": "0.1.0",
-  "homepage": "https://github.com/richardjwilson/gorgeous-glass-gifts",
+  "homepage": "http://gorgeousglassgifts.github.io",
   "author": {
     "name": "Richard Wilson",
     "url": "http://github.com/richardjwilson/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/richardjwilson/gorgeous-glass-gifts.git"
+    "url": "https://github.com/GorgeousGlassGifts/gorgeousglassgifts.github.io"
   },
   "bugs": {
-    "url": "https://github.com/richardjwilson/gorgeous-glass-gifts/issues"
+    "url": "https://github.com/GorgeousGlassGifts/gorgeousglassgifts.github.io/issues"
   },
   "engines": {
     "node": ">=0.10"
@@ -32,12 +32,6 @@
     "assemble-contrib-permalinks": "*",
     "assemble-contrib-sitemap": "*"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/richardjwilson/gorgeous-glass-gifts/blob/master/LICENSE-MIT"
-    }
-  ],
   "keywords": [
     "assemble",
     "templates",

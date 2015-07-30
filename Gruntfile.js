@@ -71,7 +71,7 @@ module.exports = function(grunt) {
           layout: '<%= config.src %>/templates/layouts/default.hbs',
           data: '<%= config.src %>/data/*.{json,yml}',
           partials: '<%= config.src %>/templates/partials/*.hbs',
-          plugins: ['assemble-contrib-permalinks','assemble-contrib-sitemap'],
+          plugins: ['assemble-middleware-permalinks','assemble-middleware-sitemap'],
         },
         files: {
           '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
@@ -89,14 +89,23 @@ module.exports = function(grunt) {
       theme: {
         expand: true,
         cwd: 'src/assets/',
-        src: '**',
+        src: '**/*.css',
         dest: '<%= config.dist %>/assets/css/'
+      },
+      images: {
+        expand: true,
+        cwd: 'src/assets/',
+        src: '**/*.{png,jpg,jpeg,gif,webp,svg}',
+        dest: '<%= config.dist %>/assets/image/'
       }
     },
 
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}']
+    clean: {
+      generated: ['<%= config.dist %>/**/*.{html,xml}'],
+      all: ['<%= config.dist %>/**']
+    }
 
   });
 
@@ -109,7 +118,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'clean',
+    'clean:generated',
     'copy',
     'assemble'
   ]);
