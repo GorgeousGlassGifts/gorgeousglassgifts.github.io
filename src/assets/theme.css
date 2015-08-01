@@ -61,7 +61,15 @@ body {
 }
 
 .navbar-inverse .navbar-nav > .active > a {
-  background-image: linear-gradient(to bottom, #1a3d04 0%, #1d4404 100%);
+  background-image: linear-gradient(to bottom, #1a3d04 0%, #1d4b04 100%);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #ebfae1;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #ffffff;
 }
 
 .text-primary {
