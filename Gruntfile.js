@@ -30,8 +30,16 @@ module.exports = function(grunt) {
 
     watch: {
       assemble: {
-        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
+        files: [
+          '<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml,css}'
+        ],
         tasks: ['assemble']
+      },
+      copy: {
+        files: [
+          '<%= config.src %>/assets/{,*/}*.css'
+        ],
+        tasks: ['copy']
       },
       livereload: {
         options: {
@@ -97,6 +105,12 @@ module.exports = function(grunt) {
         cwd: 'src/assets/',
         src: '**/*.{png,jpg,jpeg,gif,webp,svg}',
         dest: '<%= config.dist %>/assets/image/'
+      },
+      favicon: {
+        expand: true,
+        cwd: 'src/assets/',
+        src: '**/favicon.ico',
+        dest: '<%= config.dist %>'
       }
     },
 
