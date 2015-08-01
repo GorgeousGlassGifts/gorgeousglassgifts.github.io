@@ -37,7 +37,7 @@ module.exports = function(grunt) {
       },
       copy: {
         files: [
-          '<%= config.src %>/assets/{,*/}*.css'
+          '<%= config.src %>/assets/{,*/}*.{css,jpg}'
         ],
         tasks: ['copy']
       },
