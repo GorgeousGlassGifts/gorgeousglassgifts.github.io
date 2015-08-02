@@ -20,6 +20,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
 
+
   // Project configuration.
   grunt.initConfig({
 
@@ -31,7 +32,7 @@ module.exports = function(grunt) {
     watch: {
       assemble: {
         files: [
-          '<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml,css}'
+          '<%= config.src %>/{content,data,helpers,templates}/{,*/}*.{md,hbs,yml,css,js}'
         ],
         tasks: ['assemble']
       },
@@ -72,6 +73,9 @@ module.exports = function(grunt) {
     },
 
     assemble: {
+      options: {
+        helpers: ['<%= config.src %>/helpers/**/*.js' ]
+      },
       pages: {
         options: {
           flatten: true,
@@ -142,3 +146,4 @@ module.exports = function(grunt) {
   ]);
 
 };
+
