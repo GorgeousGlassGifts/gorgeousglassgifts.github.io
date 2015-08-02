@@ -74,6 +74,38 @@ body {
   color: #ffffff;
 }
 
+.navbar-inverse .navbar-nav > .open > a {
+  background-color: rgb(40, 104, 4);
+}
+
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: rgb(40, 104, 4);
+}
+
+.dropdown-menu {
+  background-color: rgb(247, 255, 242);
+}
+
+.dropdown-menu > .active > a {
+  background-color: #1c3e06;
+  background-image: linear-gradient(to bottom, #1a3d04 0%, #1d4b04 100%);
+}
+
+.dropdown-menu > .active > a:focus {
+  background-color: #1c3e06;
+  background-image: linear-gradient(to bottom, #1a3d04 0%, #1d4b04 100%);
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: rgb(222, 245, 208);
+  background-image: linear-gradient(to bottom, #def5d0 0%, #def5d0 100%);
+}
+
+.dropdown-menu > .active > a:hover {
+  background-color: #246106;
+  background-image: linear-gradient(to bottom, #266208 0%, #29580b 100%);
+}
+
 .text-primary {
   color: #1d1685;
 }
