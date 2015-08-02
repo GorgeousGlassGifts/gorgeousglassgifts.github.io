@@ -27,7 +27,7 @@ component: navbar
           {{else}}
             <li class="dropdown">
               {{#withFirst pages}}
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{this.data.menu}}<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{stripPrefix ../category}}<b class="caret"></b></a>
               {{/withFirst}}
               <ul class="dropdown-menu">
                 {{#withSort pages "data.order"}}
