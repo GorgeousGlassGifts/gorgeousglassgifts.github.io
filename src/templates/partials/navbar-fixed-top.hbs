@@ -19,7 +19,7 @@ component: navbar
           {{#lengthEqual pages 1}}
             {{#withSort pages "data.order"}}
               {{#is data.category category}}
-                <li{{#is data.title ../../../../title}} class="active"{{/is}}>
+                <li{{#is this.dest ../../../../page.dest}} class="active"{{/is}}>
                   <a href="{{relative dest this.dest}}">{{ data.title }}</a>
                 </li>
               {{/is}}
@@ -32,7 +32,7 @@ component: navbar
               <ul class="dropdown-menu">
                 {{#withSort pages "data.order"}}
                   {{#is data.category category}}
-                      <li{{#is data.title ../../../../title}} class="active"{{/is}}>
+                      <li{{#is this.dest ../../../../page.dest}} class="active"{{/is}}>
                           <a href="{{relative dest this.dest}}">{{ data.title }}</a>
                       </li>
                   {{/is}}
